@@ -1,0 +1,727 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="大大大大前端" href="https://10nlife.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="大大大大前端" href="https://10nlife.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="大大大大前端" href="https://10nlife.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="前端 性能优化" />
+
+
+<link rel="canonical" href="https://10nlife.github.io/2021/08/10/base/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+
+
+
+  <title>
+性能优化 - 计算机基础 |
+大大大大前端 = 前端很大，我要忍一下</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">性能优化
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-08-10 09:47:27">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-08-10T09:47:27+08:00">2021-08-10</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">大大大大前端</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/base/" itemprop="item" rel="index" title="分类于 计算机基础"><span itemprop="name">计算机基础</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://10nlife.github.io/2021/08/10/base/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="10nlife">
+    <meta itemprop="description" content="前端很大，我要忍一下, ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="大大大大前端">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h4 id="1浏览器的组成"><a class="anchor" href="#1浏览器的组成">#</a> 1. 浏览器的组成</h4>
+<h6 id="11-浏览器内核"><a class="anchor" href="#11-浏览器内核">#</a> 1.1 浏览器内核</h6>
+<p>浏览器中有一个最重要的模块，它主要的作用是把一切请求回来的资源变成可视化的图像，这个模块就是浏览器内核，通常也称作渲染引擎</p>
+<p>IE（Trident）</p>
+<p>Safari（Webkit）：Webkit 本身主要由两个小引擎构成的，一个是渲染引擎 “WebCore”，另一个是 javascript 解释引擎 “JSCode”，他们都是从 KDE 的渲染引擎 KHTML 以及 javascript 解释引擎 KJS 衍生来的</p>
+<p>Chrome（Blink）：在 13 年发布的 Chrome 28.0 版本开始，Chrome 放弃了 Chromium 引擎转而使用最新的 Blink，比上一代的引擎精简了代码，改善了 DOM 框架，也提高了安全性</p>
+<p>Opera（Blink）：4-6 版本使用 Elektra 引擎，7.0 使用 Presto 渲染引擎，13 年 2 月防疫 Persto 转而使用 Chromium，又转而使用 Blink 引擎</p>
+<p>Firefox（Gecko）</p>
+<h6 id="12-进程和线程"><a class="anchor" href="#12-进程和线程">#</a> 1.2 进程和线程</h6>
+<p>进程：程序的一次执行，它占有一片独立的空间，是操作系统执行的基本单元，一个进程至少有一个运行的线程：主线程（在进程启动后自动创建），一个进程中也可以同时运行多个线程，一般来说程序时多线程运行的，一个进程内的数据可以提供给多个线程共享，多个进程之间的数据是不能直接共享的</p>
+<p>线程：是进程的一个执行单元，是 CPU 调度的最小单元，程序运行的基本单元线程池：保存多个线程对象的容器，实现线程对象的反复利用</p>
+<p>JS 引擎是单线程运行的！</p>
+<h6 id="13-现代浏览器多进程多线程模型"><a class="anchor" href="#13-现代浏览器多进程多线程模型">#</a> 1.3 现代浏览器：多进程，多线程模型</h6>
+<p>过去：当你通过浏览器打开很多页面的时候，如果其中一个页面不响应了或者崩溃了，你打开的所有页面都会得不到响应，可能还有一些页面包含着一些没有保存的或者没有发送的信息</p>
+<p>如何解决：采用多进程模型，它可以避免因单个页面不响应或者崩溃的时候对整个浏览器的影响，当第三方插件崩溃时，也不会影响整个浏览器的稳定性，而且还安全</p>
+<p>浏览器有哪些进程：</p>
+<ul>
+<li>Browser 进程：浏览器的主进程，负责浏览器界面的显示和各个页面的管理，负责其他进程的创建和销毁</li>
+<li>Renderer 进程：网页渲染进程，负责网页的渲染，可以有多个</li>
+<li>各种插件进程</li>
+<li>GPU 进程</li>
+</ul>
+<h6 id="14-每个进程内部又有很多的线程"><a class="anchor" href="#14-每个进程内部又有很多的线程">#</a> 1.4 每个进程内部又有很多的线程</h6>
+<p>多线程的目的主要是保持用户界面的高度响应</p>
+<p>例如：为了不让 Broswer 进程的 UI 线程被其他耗时的操作（大文件，本地文件读写）所阻塞，我们会把这些操作放到分线程中去处理，在 Renderer 进程中，为了不让其他操作阻止渲染线程的高速执行，我们通常会将线程管线化</p>
+<h4 id="2-浏览器的主要模块"><a class="anchor" href="#2-浏览器的主要模块">#</a> 2. 浏览器的主要模块</h4>
+<h6 id="21-浏览器的渲染引擎"><a class="anchor" href="#21-浏览器的渲染引擎">#</a> 2.1 浏览器的渲染引擎</h6>
+<p>一个渲染引擎主要包括：HTML 解析器，CSS 解析器，javascript 引擎，布局 layout 模块，绘图模块</p>
+<ul>
+<li>HTML 解析器：解析 HTML 文档的解析器，主要是将 HTML 文本解析成 DOM 树</li>
+<li>CSS 解析器：为 DOM 中的各个元素对象计算出样式信息，为布局提供基础设施</li>
+<li>JS 引擎：使用 JS 代码可以修改网页的内容，也能修改 css 的信息，JS 引擎能解释 JS 代码</li>
+<li>布局模块：在 DOM 创建之后，Webkit 需要将其中的元素对象同样式信息结合起来，计算他们的大小位置等布局信息</li>
+<li>绘图模块：使用图形库将布局计算后的各个网页的节点绘制成图像结果</li>
+</ul>
+<p>大致的渲染过程：</p>
+<ul>
+<li>遇见 HTML 标记，调用 HTML 解析器解析为对应的 token（一个 token 就是一个标签文本的序列化）并创建 DOM 树</li>
+<li>遇见 style/link 标记，调用相应的解析器处理 CSS 标记，并构建出 CSS 样式树</li>
+<li>遇见 script 标记，调用 JS 引擎，处理 script 标记，绑定事件，修改 DOM 树 / CSS 树等</li>
+<li>将 DOM 树和 CSSOM 树合并成一个渲染树</li>
+<li>根据渲染树来渲染，以计算每个节点的集合信息（这一个过程需要依赖 GPU）</li>
+<li>最终将各个节点绘制到屏幕上去</li>
+</ul>
+<h6 id="22-样式的渲染注意点"><a class="anchor" href="#22-样式的渲染注意点">#</a> 2.2 样式的渲染注意点</h6>
+<p>style 标签中的样式是由 html 解析器（异步）来进行解析的，容易出现闪屏现象（html 解析器先解析完了 html 结构，并且把结构渲染了，这是解析的 style 才被渲染，就会出现闪屏现象）</p>
+<p>link 标签引入的样式是由 css 解析器去解析，并且是同步解析的，css 解析器会阻塞页面的渲染（理由这一点来避免闪屏问题）</p>
+<h4 id="3-关于阻塞"><a class="anchor" href="#3-关于阻塞">#</a> 3. 关于阻塞</h4>
+<h6 id="31-css阻塞"><a class="anchor" href="#31-css阻塞">#</a> 3.1 CSS 阻塞</h6>
+<p>只有 link 引入的外部 css 才能够产生阻塞</p>
+<ul>
+<li>style 标签中的样式：
+<ol>
+<li>由 html 解析器进行解析</li>
+<li>不阻塞浏览器渲染（可能会产生 “闪屏现象”）</li>
+<li>不阻塞 DOM 解析</li>
+</ol>
+</li>
+<li>link 引入的外部 css 样式（推荐）
+<ol>
+<li>由 css 解析器进行渲染</li>
+<li>阻塞浏览器渲染（可以利用这个阻塞来避免 “闪屏”）</li>
+<li>阻塞其后面的 js 语句的执行</li>
+<li>不阻塞 DOM 的解析（绝大多浏览器的工作方式）</li>
+</ol>
+</li>
+<li>优化核心理念：
+<ol>
+<li>使用 CDN 节点进行外部资源的加载速度</li>
+<li>对 css 进行压缩（利用打包工具，webpack，gulp）</li>
+<li>减少对 http 请求数，将多个 css 文件合并</li>
+<li>优化样式表的代码</li>
+</ol>
+</li>
+</ul>
+<h6 id="32-js阻塞"><a class="anchor" href="#32-js阻塞">#</a> 3.2 js 阻塞</h6>
+<ul>
+<li>阻塞后续的 DOM 解析：浏览器并不知道脚本后续的内容，如果先去解析了下面的 DOM，而随后的 js 删除了所有的 DOM，那么浏览器就相当于做了无用功，所以索性停住，等脚本执行完了，浏览器再继续向下解析 DOM</li>
+<li>阻塞页面的渲染：js 也可以给 DOM 设置样式，浏览器等该脚本执行完毕，渲染出一个最终的结果</li>
+<li>阻塞后续的 js 的执行：维护依赖关系</li>
+</ul>
+<h6 id="33-阻塞备注"><a class="anchor" href="#33-阻塞备注">#</a> 3.3 阻塞备注</h6>
+<ul>
+<li>css 的解析和 js 的执行是互斥的，css 解析的时候 js 会停止执行，js 执行的时候 css 会停止解析</li>
+<li>无论 css 阻塞还是 js 阻塞，都不会阻塞浏览器请求发出去的工作模式，只要是涉及到网络请求的内容都会先发请求去获取资源，至于资源回来了什么时候用，由浏览器自己协调</li>
+<li>Webkit 和 Firefox 都进行了预解析这项优化，在执行 js 脚本时，浏览器的其他线程会预解析文档的其余部分，找出并加载需要通过网络加载的其他资源，这样资源就可以并行连接上加载，从而提高总体的速度，预解析不会修改 DOM 树</li>
+</ul>
+<h4 id="4-css图层"><a class="anchor" href="#4-css图层">#</a> 4. CSS 图层</h4>
+<p>浏览器在渲染一个页面时，会将页面分为很多层，图层有大有小，每个图层有一个或者多个节点，在渲染 DOM 的时候，浏览器所作的工作实际上是：</p>
+<ul>
+<li>获取 DOM 后分割为多个图层</li>
+<li>对每个图层的节点计算样式结果（Recalculate style -- 样式重计算）</li>
+<li>为每个节点生成图形和位置（重排）</li>
+<li>将每个节点重新绘制填充到图层位图中（重绘）</li>
+<li>图层作为纹理上传到 GPU</li>
+<li>组合多个图层到页面上生成最终屏幕图像</li>
+</ul>
+<h6 id="41-图层创建的条件"><a class="anchor" href="#41-图层创建的条件">#</a> 4.1 图层创建的条件</h6>
+<p>Chorme 浏览器满足一下任意情况就会创建图层</p>
+<ul>
+<li>拥有 3D 变换的 CSS 属性</li>
+<li>使用加速视频解码的 video 节点</li>
+<li>使用 csnvas 节点</li>
+<li>CSS3 动画节点</li>
+<li>拥有 CSS 加速属性的元素</li>
+</ul>
+<h4 id="5-重绘"><a class="anchor" href="#5-重绘">#</a> 5. 重绘</h4>
+<p>重绘是一个元素外观的改变所触发的浏览器行为，例如改变 outline，背景色等属性，浏览器会根据元素的新属性重新绘制，使元素呈现新的外观，重绘不会带来重新布局，所以并不一定伴随重排</p>
+<ul>
+<li>重绘和重排都是以图层为单位的，如果图层中某个元素需要重绘，那么整个图层都需要重绘</li>
+<li>我们一般把这些变化的东西拥有自己的一个图层</li>
+<li>大多数浏览器自己会为 CSS3 动画的节点自动创建图层</li>
+</ul>
+<h4 id="6-重排"><a class="anchor" href="#6-重排">#</a> 6. 重排</h4>
+<p>渲染对象在创建完成并且添加渲染树时，并不包含位置和大小信息，计算这些值的过程称为布局或者重排</p>
+<ul>
+<li>重绘不一定需要重排，改个颜色不会改变布局</li>
+<li>重排大多数情况下会导致重绘，改变一个网页元素的位置也需要重新绘制</li>
+</ul>
+<h4 id="56-触发重绘重排的属性"><a class="anchor" href="#56-触发重绘重排的属性">#</a> 5&amp;6. 触发重绘重排的属性</h4>
+<p>触发重绘的属性（改变元素外观的属性）</p>
+<table>
+<thead>
+<tr>
+<th>- color</th>
+<th>- background</th>
+<th>- outline-color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- border-style</td>
+<td>- background-image</td>
+<td>- outline</td>
+</tr>
+<tr>
+<td>- border-radius</td>
+<td>- background-position</td>
+<td>- outline-style</td>
+</tr>
+<tr>
+<td>- visibility</td>
+<td>- background-repeat</td>
+<td>- outline-width</td>
+</tr>
+<tr>
+<td>- text-decoration</td>
+<td>- background-size</td>
+<td>- box-shadow</td>
+</tr>
+</tbody>
+</table>
+<p>触发回流的属性（改变元素布局的属性）</p>
+<table>
+<thead>
+<tr>
+<th>- width</th>
+<th>- top</th>
+<th>- text-align</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- height</td>
+<td>- bottom</td>
+<td>- overflow-y</td>
+</tr>
+<tr>
+<td>- padding</td>
+<td>- left</td>
+<td>- font-weight</td>
+</tr>
+<tr>
+<td>- margin</td>
+<td>- right</td>
+<td>- overflow</td>
+</tr>
+<tr>
+<td>- display</td>
+<td>- position</td>
+<td>- font-family</td>
+</tr>
+<tr>
+<td>- border-width</td>
+<td>- float</td>
+<td>- line-height</td>
+</tr>
+<tr>
+<td>- border</td>
+<td>- clear</td>
+<td>- vertival-align</td>
+</tr>
+<tr>
+<td>- min-height</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>常见的触发重排的操作</p>
+<p>重排的成本比重绘要高很多</p>
+<p>一个节点的重排可能会导致子节点，父节点以及同级节点的重排</p>
+<p>所以，一下动作成本是比较高的：</p>
+<ul>
+<li>当你增加，删除，修改 DOM 节点时，会导致重排和重绘</li>
+<li>当你移动 DOM 位置时</li>
+<li>当你 Resize 窗口的时候（移动端没有这个问题）</li>
+<li>当你修改网页的默认字体的时候</li>
+<li>获取某些属性的时候（width，height。。。）</li>
+</ul>
+<p>优化方案：</p>
+<ol>
+<li>元素位置移动变换时使用 CSS3 的 transform 来代替对 top，left 的操作，transform 和 opacity 的改变仅仅影响图层的组合（不会重排重绘）</li>
+<li>使用 opacity 来代替 visibility
+<ul>
+<li>使用 visibility 不触发重排，但是依然会触发重绘</li>
+<li>直接使用 opacity 即触发重绘又触发重排</li>
+<li>opacity 配合图层使用，既不重绘又不重排（现在会重绘）</li>
+</ul>
+</li>
+<li>不要使用 table 布局 table-cell</li>
+<li>将多次改变样式改变的操作合并成一次操作（不要一条一条的修改 DOM 的样式，预先定义号 class，然后修改 className）</li>
+<li>将 DOM 离线后在修改（由于 display：none 的元素不在渲染树里面，对隐藏了的这个元素一顿操作也不会触发重绘重排）</li>
+<li>利用文档碎片</li>
+<li>不要把获取 DOM 节点的属性值放到循环里，不然循环多次就会重绘重排多少次</li>
+<li>动画实现过程中，启用 GPU 硬件加速，transform： translateZ (0)</li>
+<li>为动画元素新建图层，提供动画元素的 z-index</li>
+</ol>
+<h4 id="7浏览器缓存"><a class="anchor" href="#7浏览器缓存">#</a> 7. 浏览器缓存</h4>
+<p>转至计算机基础 - 浏览器缓存</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%89%8D%E7%AB%AF-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag"><i class="ic i-tag"></i> 前端 性能优化</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-08-12 15:56:44" itemprop="dateModified" datetime="2021-08-12T15:56:44+08:00">2021-08-12</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="10nlife 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="10nlife 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="10nlife 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>10nlife <i class="ic i-at"><em>@</em></i>大大大大前端
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://10nlife.github.io/2021/08/10/base/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="性能优化">https://10nlife.github.io/2021/08/10/base/性能优化/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/08/09/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7-1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit31ffoj20zk0m8naf.jpg" title="网络安全知识嗷[1]">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机基础</span>
+  <h3>网络安全知识嗷[1]</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text"> 1. 浏览器的组成</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#11-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 1.1 浏览器内核</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#12-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.0.2.</span> <span class="toc-text"> 1.2 进程和线程</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#13-%E7%8E%B0%E4%BB%A3%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.0.3.</span> <span class="toc-text"> 1.3 现代浏览器：多进程，多线程模型</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#14-%E6%AF%8F%E4%B8%AA%E8%BF%9B%E7%A8%8B%E5%86%85%E9%83%A8%E5%8F%88%E6%9C%89%E5%BE%88%E5%A4%9A%E7%9A%84%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.0.4.</span> <span class="toc-text"> 1.4 每个进程内部又有很多的线程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%B8%BB%E8%A6%81%E6%A8%A1%E5%9D%97"><span class="toc-number">2.</span> <span class="toc-text"> 2. 浏览器的主要模块</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#21-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E"><span class="toc-number">2.0.1.</span> <span class="toc-text"> 2.1 浏览器的渲染引擎</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#22-%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%B8%B2%E6%9F%93%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-number">2.0.2.</span> <span class="toc-text"> 2.2 样式的渲染注意点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%85%B3%E4%BA%8E%E9%98%BB%E5%A1%9E"><span class="toc-number">3.</span> <span class="toc-text"> 3. 关于阻塞</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#31-css%E9%98%BB%E5%A1%9E"><span class="toc-number">3.0.1.</span> <span class="toc-text"> 3.1 CSS 阻塞</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#32-js%E9%98%BB%E5%A1%9E"><span class="toc-number">3.0.2.</span> <span class="toc-text"> 3.2 js 阻塞</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#33-%E9%98%BB%E5%A1%9E%E5%A4%87%E6%B3%A8"><span class="toc-number">3.0.3.</span> <span class="toc-text"> 3.3 阻塞备注</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-css%E5%9B%BE%E5%B1%82"><span class="toc-number">4.</span> <span class="toc-text"> 4. CSS 图层</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#41-%E5%9B%BE%E5%B1%82%E5%88%9B%E5%BB%BA%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="toc-number">4.0.1.</span> <span class="toc-text"> 4.1 图层创建的条件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E9%87%8D%E7%BB%98"><span class="toc-number">5.</span> <span class="toc-text"> 5. 重绘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E9%87%8D%E6%8E%92"><span class="toc-number">6.</span> <span class="toc-text"> 6. 重排</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#56-%E8%A7%A6%E5%8F%91%E9%87%8D%E7%BB%98%E9%87%8D%E6%8E%92%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">7.</span> <span class="toc-text"> 5&amp;6. 触发重绘重排的属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98"><span class="toc-number">8.</span> <span class="toc-text"> 7. 浏览器缓存</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2021/07/31/base/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E5%97%B7/" rel="bookmark" title="计算机网络">计算机网络</a></li><li><a href="/2021/08/05/base/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86%E5%97%B7/" rel="bookmark" title="浏览器缓存知识嗷">浏览器缓存知识嗷</a></li><li><a href="/2021/08/06/base/%E8%B7%A8%E5%9F%9F%E7%9B%B8%E5%85%B3%E5%97%B7/" rel="bookmark" title="跨域相关嗷">跨域相关嗷</a></li><li><a href="/2021/08/07/base/cookie%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%97%B7/" rel="bookmark" title="cookie相关知识嗷">cookie相关知识嗷</a></li><li><a href="/2021/08/08/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7-0/" rel="bookmark" title="网络安全知识嗷[0]">网络安全知识嗷[0]</a></li><li><a href="/2021/08/09/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7-1/" rel="bookmark" title="网络安全知识嗷[1]">网络安全知识嗷[1]</a></li><li class="active"><a href="/2021/08/10/base/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="bookmark" title="性能优化">性能优化</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="10nlife"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">10nlife</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">16</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">5</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">8</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2021/07/31/vue/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%9F%A5%E8%AF%86%E5%97%B7-1/" title="vue全家桶知识嗷[1]">vue全家桶知识嗷[1]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/08/07/base/cookie%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%97%B7/" title="cookie相关知识嗷">cookie相关知识嗷</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2021/07/31/vue/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%9F%A5%E8%AF%86%E5%97%B7-4/" title="vue全家桶知识嗷[4]">vue全家桶知识嗷[4]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/07/31/base/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E5%97%B7/" title="计算机网络">计算机网络</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/08/05/base/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86%E5%97%B7/" title="浏览器缓存知识嗷">浏览器缓存知识嗷</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/08/10/base/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="性能优化">性能优化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/08/06/base/%E8%B7%A8%E5%9F%9F%E7%9B%B8%E5%85%B3%E5%97%B7/" title="跨域相关嗷">跨域相关嗷</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/base/" title="分类于 计算机基础">计算机基础</a>
+</div>
+
+    <span><a href="/2021/08/09/base/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%97%B7-1/" title="网络安全知识嗷[1]">网络安全知识嗷[1]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2021/07/31/vue/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%9F%A5%E8%AF%86%E5%97%B7-5/" title="vue全家桶知识嗷[5]">vue全家桶知识嗷[5]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/node/" title="分类于 node">node</a>
+</div>
+
+    <span><a href="/2021/07/31/node/node-js%E7%9F%A5%E8%AF%86%E7%AE%80%E6%98%93%E7%89%88%E5%97%B7/" title="node.js知识简易版嗷">node.js知识简易版嗷</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">10nlife @ 大大大大前端</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/08/10/base/性能优化/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
